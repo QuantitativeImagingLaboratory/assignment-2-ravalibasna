@@ -210,7 +210,7 @@ class Filtering:
         filteredimage=np.uint8(self.post_process_image(np.absolute(filteredimage)))
         magnitudeofdft=np.uint8(np.log(magnitudeofdft))
 
-        #magnitudeofdft=self.post_process_image(magnitudeofdft)
+        
         magnitudeoffiltereddft=np.uint8(np.log((1+np.absolute(filterimage))))
-        #magnitudeoffiltereddft=self.post_process_image(magnitudeoffiltereddft)
+       
         return [ filteredimage, magnitudeofdft*10,magnitudeoffiltereddft*10]
